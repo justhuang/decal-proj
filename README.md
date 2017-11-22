@@ -1,4 +1,4 @@
-`Project Summary`:
+# Project Summary
 
 Food Delivery program for a restaurant.
 

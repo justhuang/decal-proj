@@ -156,4 +156,3 @@ This project is licensed under the Rails-Decal-Project License
 ## Acknowledgments
 
 * Stackoverflow carried this project
-

@@ -18,11 +18,13 @@ class OrdersController < ApplicationController
 
   def add
     #add orders to employee.orders
-    meal = #ask user for meal
-    customer = #ask user for customer
-    employee = #ask user for employee
-
-    new_order = Order.new(meal: meal, customer: customer, employee: employee)
+    meal = params[:meal]
+    address = params[:address]
+    name = params[:name]
+    employees = Employee.all
+    ord = employees.map{|emp| emp.order.length}
+    employee = employees[ord.index(ord.min)]
+    new_order = Order.new(meal: meal, employee: employee, name: name, address: address)
     #save the order to the DB
     @employee.add_order(new_order)
   end

@@ -1,0 +1,2 @@
+class DropEmployee < ApplicationRecord
+end

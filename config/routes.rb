@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :employees
   get '/', to: "orders#new", as: 'orders'
   post '/', to: "orders#create", as: 'create'
   resources :order

@@ -7,7 +7,6 @@ The software is designed for one restaurant only and each customer can only orde
 The main components are:
 
 - **Employees** (manager)
-- **Customers** of the Restaurant
 - **Meals** that can be ordered
 - **Orders** made by customers, and assigned to a manager
 
@@ -22,14 +21,7 @@ Then let's move to the controller. Here are the **user actions** we want to impl
 - `List` all meals available in the restaurant
 - `Add` a new meal
 
-## 2 - (`Customer`)
-
-We need to keep a list of all our customers. When a new customer calls to order, the first thing we need to do is add them to our list. Each customer has a name and an address. The controller needs to have the following user actions:
-
-- `List` all customers available in the restaurant
-- `Add` a new customer
-
-## 3 - (`Employee`)
+## 2 - (`Employee`)
 
 The restaurant has only one type of employee: **manager**.
 
@@ -38,9 +30,9 @@ With a username and password, we can implement a **login** logic in our app to h
 Now when you run the food delivery app, the first thing you can do is to **sign in**, then you will see a dashboard with commands.
 
 
-## 4 - (`Order`) Link all the models here.
+## 3 - (`Order`) Link all the models here.
 
-An order is taken for a **customer**, containing a **meal** (to simplify things, let's say that an order can only contain **one meal**) and is then assigned to a given **delivery guy**. Finally, the `Order` model needs to record whether or not the meal has been delivered.
+An order is taken for a customer, containing a **meal** (to simplify things, let's say that an order can only contain **one meal**) and is then assigned to a given **delivery guy**. Finally, the `Order` model needs to record whether or not the meal has been delivered.
 
 Then, we need to make sure that the following actions are implemented in the program:
 
@@ -48,11 +40,7 @@ As an manager, I can:
 -log in
 -add a meal
 -view all the meals
--add a customer
--view all the customers
 -view all the undelivered orders
--add an order for a customer and assign it to a delivery guy
--view my undelivered orders
 -mark an order as delivered
 
 
@@ -70,13 +58,10 @@ Once logged in, each will be presented with a host of options.
 
 The employee would be able to:
 ```
-1. Add a meal
-2. List available meals
-3. Add a customer
-4. List customers
-5. Add an order
-6. View undelivered orders
-9. Exit
+1. List available meals
+2. Add an order
+3. View undelivered orders
+4. Exit
 ```
 
 The customer would be able to:
@@ -91,7 +76,6 @@ The customer would be able to:
 The main components are:
 
 - **Employees** (manager)
-- **Customers** of the Restaurant
 - **Meals** that can be ordered
 - **Orders** made by customers, and assigned to a manager
 
@@ -148,7 +132,7 @@ https://www.heroku.com
 
 ## Authors
 
-* **Justin Huang** - **Sarah Hammond** - **Matt Choi** - **Tim Cheng** *
+* **Justin Huang** - **Sarah Hammond** - **Matt Choi** - **Tim Cheng** 
 
 ## License
 

@@ -6,14 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-%w(Justin Sarah Matt Tim).each do |name|
-  Customer.create name: name, address: 'Berkeley'
-end
-
 %w(Jessica Clara Joe John).each do |name|
   Employee.create username: name, password: '123', role: 'manager'
 end
 
 %w(Pasta Pizza Sandwich Burger Burrito).each do |food|
-  Meal.create name: food price: rand(6..15)
+  Meal.create name: food, price: rand(6..15)
 end
+
+sarah = Employee.create username: 'Sarah', password: '123', role: 'manager'
+taco = Meal.create name: 'taco', price: rand(6..15)
+Order.create meal: taco, employee: sarah

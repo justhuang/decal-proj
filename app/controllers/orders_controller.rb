@@ -1,19 +1,11 @@
 class OrdersController < ApplicationController
 
   def create
-    @order = Order.new(meal: @meal, employee: @employee, customer: @customer, delivered: false)
+    @order = Order.new(meal: @meal, employee: @employee, delivered: false)
   end
 
   def new
     @order = Order.new
-  end
-
-  def list_undelivered_orders
-    #list meals where the delivered attribute is False
-    orders = Order.all
-    orders.select |order| {
-      order.delivered == false
-    }
   end
 
   def add
@@ -22,11 +14,11 @@ class OrdersController < ApplicationController
     address = params[:address]
     name = params[:name]
     employees = Employee.all
-    ord = employees.map{|emp| emp.order.length}
+    ord = employees.map{|emp| emp.orders.length}
     employee = employees[ord.index(ord.min)]
-    new_order = Order.new(meal: meal, employee: employee, name: name, address: address)
+    @order = Order.new(meal: meal, employee: employee, name: name, address: address)
     #save the order to the DB
-    @employee.add_order(new_order)
+    @order.save()
   end
 
   def list_my_orders(employee)

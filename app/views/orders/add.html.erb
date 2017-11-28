@@ -1,2 +1,8 @@
-<h1>Orders#add</h1>
-<p>Find me in app/views/orders/add.html.erb</p>
+<h3>Welcome to Delivery World</h3>
+
+<%= simple_form_for @order do |o| %>
+  <%= o.input :name %>
+  <%= o.input :address %>
+  <%= o.input :meal :collection => %w [@meals] %>
+  <%= o.button :submit %>
+<% end %>

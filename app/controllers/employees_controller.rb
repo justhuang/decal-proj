@@ -1,6 +1,6 @@
 class EmployeesController < ApplicationController
   def create
-    @employee = Employee.new(params[:name], params[:password], role: 'manager', orders: {}, customers: {})
+    @employee = Employee.new(params[:name], params[:password], role: 'manager')
   end
 
   def new

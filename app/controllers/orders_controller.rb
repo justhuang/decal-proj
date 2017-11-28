@@ -1,22 +1,38 @@
 class OrdersController < ApplicationController
 
-  def create
-    @order = Order.new(meal: @meal, employee: @employee, delivered: false)
-  end
 
   def new
     @order = Order.new
   end
 
-  def add
+  def create
     #add orders to employee.orders
     meal = params[:meal]
     address = params[:address]
     name = params[:name]
     employees = Employee.all
-    ord = employees.map{|emp| emp.orders.length}
-    employee = employees[ord.index(ord.min)]
-    @order = Order.new(meal: meal, employee: employee, name: name, address: address)
+    #ord = employees.map{|emp| emp.orders.length}
+    #employee = employees[ord.index(ord.min)]
+    ordersize = []
+    employees.to_a.each do |emp|
+      if emp.orders.to_a.empty?
+        employee = emp
+      else
+        ordersize += [emp.orders.to_a.length, emp]
+      end
+    end
+    if not ordersize.empty?
+      min = ordersize[0][0]
+      ordersize.each do |o|
+        if o[0] < min
+          min = o[0]
+          employee = o[1]
+        end
+      end
+    end
+    @order = Order.new(address: address, name: name)
+    @order.employee = employee
+    @order.meal = meal
     #save the order to the DB
     @order.save()
   end

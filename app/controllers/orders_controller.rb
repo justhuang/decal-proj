@@ -23,6 +23,7 @@ class OrdersController < ApplicationController
     end
     if not ordersize.empty?
       min = ordersize[0][0]
+      employee = ordersize[0][1]
       ordersize.each do |o|
         if o[0] < min
           min = o[0]
@@ -51,5 +52,7 @@ class OrdersController < ApplicationController
       order.delivered = True
       #not sure whether this would work. I feel like the order is a local state, so manipulating its attributes wouldn't cause changes.
     end
+  end
+  def thanks
   end
 end

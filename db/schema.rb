@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20171128192812) do
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "meal_id"
+    t.integer "employee_id"
   end
 
 end

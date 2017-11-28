@@ -127,8 +127,8 @@ https://www.heroku.com
 
 ## Built With
 
-* [Rails](http://rubyonrails.org/) - The web framework used
-* [Javascript](React) - Front-end
+* [Rails](http://rubyonrails.org/) - Back-end Web Framework
+* [Javascript](React) - Front-end Web Framework
 
 ## Authors
 
@@ -139,4 +139,4 @@ https://www.heroku.com
 This project is licensed under the Rails-Decal-Project License
 ## Acknowledgments
 
-* Stackoverflow carried this project
+* Stackoverflow 

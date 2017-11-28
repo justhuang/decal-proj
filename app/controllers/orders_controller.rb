@@ -35,11 +35,12 @@ class OrdersController < ApplicationController
     @order.meal = meal
     #save the order to the DB
     @order.save()
+    redirect_to thanks_path
   end
 
-  def list_my_orders(employee)
+  def list
     #list all orders that belong to specific employee
-    employee.order.each do |order|
+    Orders.all.to_a.each do |order|
       puts order
     end
   end

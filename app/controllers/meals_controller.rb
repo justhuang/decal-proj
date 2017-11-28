@@ -10,7 +10,6 @@ class MealsController < ApplicationController
 
   def list
     # list all the meals from 1 - n on the index page for meals
-    @meals = Meal.all
-    @meal = Meal.find(params[:name])
+    @meals = Meal.all.to_a
   end
 end

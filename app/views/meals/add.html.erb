@@ -1,2 +1,7 @@
-<h1>Meals#add</h1>
-<p>Find me in app/views/meals/add.html.erb</p>
+<h3>Welcome to Delivery World</h3>
+
+<%= simple_form_for @meal do |m| %>
+  <%= m.input :name %>
+  <%= m.input :price %>
+  <%= m.button :submit %>
+<% end %>

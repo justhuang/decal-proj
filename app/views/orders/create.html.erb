@@ -3,6 +3,6 @@
 <%= simple_form_for @order do |o| %>
   <%= o.input :name %>
   <%= o.input :address %>
-  <%= o.input :meal :collection => %w [@meals] %>
+  <%= o.input :meal :collection => %w Meals.all.to_a %>
   <%= o.button :submit %>
 <% end %>

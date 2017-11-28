@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root 'customers#create'
+  post '/', to: 'customers#', as: ''
+  
   get 'orders/list_undelivered_orders'
 
   get 'orders/add'

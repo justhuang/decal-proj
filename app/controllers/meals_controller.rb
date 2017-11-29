@@ -1,7 +1,8 @@
 class MealsController < ApplicationController
 
   def create
-    @meal = Meal.new(name: params[:name])
+    @meal = Meal.new(name: params[:name], price: params[:price])
+    redirect_to orders_path
   end
 
   def new

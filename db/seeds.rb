@@ -16,4 +16,4 @@ end
 
 sarah = Employee.create username: 'Sarah', password: '123', role: 'manager'
 taco = Meal.create name: 'taco', price: rand(6..15)
-Order.create meal: taco, employee: sarah
+Order.create meal: taco, employee: sarah, name: 'Justin', address: '2'

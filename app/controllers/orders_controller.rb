@@ -2,6 +2,9 @@ class OrdersController < ApplicationController
 
 
   def new
+    if employee_signed_in?
+      redirect_to manager_path
+    end
     @order = Order.new
   end
 
@@ -39,11 +42,9 @@ class OrdersController < ApplicationController
     redirect_to thanks_path
   end
 
-  def list
+  def list_orders
     #list all orders that belong to specific employee
-    Orders.all.to_a.each do |order|
-      puts order
-    end
+    @orders = Order.all.to_a
   end
 
   def mark_as_delivered(employee)

@@ -16,7 +16,7 @@ Please make sure you consistently keep your repo up to date by running git pull 
 
 ## 1 - (`Meal`)
 
-The restaurant sells meals, so we will store the meals that belong to the customer in a DB. Each meal has a name and a price.
+The restaurant sells meals, so we will store the meals that belong to the customer in a database. Each meal has a name and a price.
 
 Then let's move to the controller. Here are the **user actions** we want to implement:
 
@@ -41,15 +41,8 @@ Then, we need to make sure that the following actions are implemented in the pro
 As an manager, I can:
 -log in
 -add a meal
--view all the meals
--view all the undelivered orders
--mark an order as delivered
-
-
-## 5 - (Optional if we have time to do it) - `Destroy` actions
-
-- As a manager, I can delete a meal
-- As a manager, I can delete a customer
+-view all meals
+-view all orders
 
 # Food Delivery
 
@@ -60,15 +53,15 @@ Once logged in, each will be presented with a host of options.
 
 The employee would be able to:
 ```
-1. List available meals
-2. Add an order
-3. View undelivered orders
+1. Add a meal
+2. List available meals
+3. View all orders
 4. Exit
 ```
 
 The customer would be able to:
 ```
-1. List available meals
+1. See available meals
 2. Place an order
 3. Exit
 ```
@@ -133,7 +126,7 @@ https://www.heroku.com
 
 ## Authors
 
-* **Justin Huang** - **Sarah Hammond** - **Matt Choi** - **Tim Cheng** 
+* **Justin Huang** - **Sarah Hammond** - **Matty Choi** - **Timmy Cheng** 
 
 ## License
 

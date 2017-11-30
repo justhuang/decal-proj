@@ -26,6 +26,7 @@ Then let's move to the controller. Here are the **user actions** we want to impl
 ## 2 - (`Employee`)
 
 The restaurant has only one type of employee: **manager**.
+Employees are assigned orders automatically based on how many existing orders they already have. 
 
 
 With a username and password, we can implement a **login** logic in our app to have one dashboard for the manager
@@ -34,7 +35,7 @@ Now when you run the food delivery app, the first thing you can do is to **sign 
 
 ## 3 - (`Order`) Link all the models here.
 
-An order is taken for a customer, containing a **meal** (to simplify things, let's say that an order can only contain **one meal**) and is then assigned to a given **delivery guy**. Finally, the `Order` model needs to record whether or not the meal has been delivered.
+An order is taken for a customer, containing a **meal** (to simplify things, let's say that an order can only contain **one meal**) and is then assigned to a given **employee**. The orders are automatically assigned to employees based on how many orders they already have. Finally, the `Order` model needs to record whether or not the meal has been delivered.
 
 Then, we need to make sure that the following actions are implemented in the program:
 

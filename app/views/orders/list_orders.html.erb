@@ -1,3 +1,6 @@
-<% @orders.each do |o| %>
-  <%= o.name o.address o.employee %>
+<% @orders.to_a.each do |o| %>
+  <%= o.name %>
+  <%= o.address %>
+  <br>
 <% end %>
+<%= link_to 'Home', orders_path %>

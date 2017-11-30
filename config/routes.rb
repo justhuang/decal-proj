@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'meals/all', to: 'meals#list', as: 'meal_list'
   get 'meals/new', to: "meals#new", as: 'meals'
   post 'meals/new', to: "meals#create", as: 'create_meals'
-  get 'order/all', to: 'orders#list_orders', as: 'order_list'
+  get 'orders/all', to: 'orders#list_orders', as: 'order_list'
   get 'thanks', to: 'orders#thanks', as: 'thanks'
   get '/manager/dashboard', to: 'employees#manager_dashboard', as: 'manager'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

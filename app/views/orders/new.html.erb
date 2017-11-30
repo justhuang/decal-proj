@@ -7,4 +7,10 @@
   <%= o.association :meal %>
   <%= o.button :submit %>
 <% end %>
-<li><%= link_to 'Login', new_employee_session_path %></li>
+<%= link_to 'Login', new_employee_session_path %>
+<h3> Menu </h3>
+<% @meals.each do |m| %>
+  <%= m.name %>
+  <%= '$' + m.price.to_s %>
+  <br>
+<% end %>

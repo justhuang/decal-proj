@@ -1,4 +1,6 @@
 <% @meals.each do |m| %>
   <%= m.name %>
+  <%= '$' + m.price.to_s %>
+  <br>
 <% end %>
-<li><%= link_to 'Home', orders_path %></li>
+<%= link_to 'Home', orders_path %>

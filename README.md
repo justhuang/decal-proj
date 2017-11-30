@@ -2,6 +2,8 @@
 
 Food Delivery program for a restaurant.
 
+**Figma prototype: https://www.figma.com/file/WjuxVWpCzM7amQ9LNa0lKhB4/Rails-Proj**
+
 The software is designed for one restaurant only and each customer can only order one meal
 
 The main components are:
@@ -70,7 +72,6 @@ The customer would be able to:
 2. Place an order
 3. Exit
 ```
-
 
 
 The main components are:
